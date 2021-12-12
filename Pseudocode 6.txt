@@ -1,0 +1,20 @@
+//DECLARATION
+DECLARE Int1 : Integer
+
+
+//INITIALISATION
+Int1 <-- 0
+
+
+//INPUT  
+INPUT "Enter number of donuts to process: " Int1
+
+
+//PROCESS
+If Int1 < 0 Then
+Output "Invalid number of donuts."
+  Else If Int1 <= 9 Then
+    Output "Number of donuts: " & Int1 
+  ElseIf Int1 > 10 Then
+    Output "Number of donuts is many." 
+End If

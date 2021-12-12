@@ -1,0 +1,30 @@
+//DECLARATIONS
+DECLARE Str1, Str2 : STRING
+DECLARE Char1, Char2, Char3 : CHARACTER
+DECLARE i : INTEGER
+
+//INITIALIZATION
+Str1 <-- ""
+Str2 <-- ""
+Char1 <-- ''
+Char2 <-- ''
+Char3 <-- ''
+i <-- 0
+
+
+//PROGRAMME
+INPUT "Enter string to process: " Str1
+INPUT "Enter character to replace: " Char2
+INPUT "Enter character to replace with: " Char3
+
+For i <-- 1 to LEN(Str1)
+   Char1 <-- MID(Str1, i, 1)
+   If Char1 <> Char2
+     THEN
+       Str2 <-- Str2 + Char1
+     ELSE
+       Str2 <-- Str2 + Char3
+   End If
+Next i
+
+Output "String after replacement is: " & Str2

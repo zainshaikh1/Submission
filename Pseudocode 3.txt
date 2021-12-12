@@ -1,0 +1,41 @@
+//DECLARATION
+Declare Str1,  : String
+Declare SelectedChar, X: Character
+Declare CountSelect, CountOthers, CountAlpha, CountDigits, CountSpecial, i : Integer
+
+//INITIALISATION
+Str1 <-- ""
+X <-- ' '
+SelectedChar <-- ' '
+CountSelect <-- 0
+CountOthers <-- 0
+CountDigits <-- 0
+CountSpecial <-- 0
+i <-- 0
+
+//PROCESS
+OUTPUT "Enter Your String: "
+INPUT Str1
+OUTPUT "Enter the character to count: " 
+INPUT SelectedChar
+LCASE(Str1)
+LCASE(SelectedChar)
+
+FOR i <-- 1 to LEN(Str1)
+   X <-- Mid(Str1, i, 1)
+   IF X = SelectedChar  THEN
+   CountSelect <-- CountSelect + 1
+   ELSEIF ASC(X) > 96 AND ASC(X) <123 AND      ASC(X)<> ASC( SelectedChar)
+    THEN CountOthers <-- CountOthers + 1
+    ELSEIF ASC(X)>47 AND ASC(X)<58 AND      ASC(X)<>ASC(SelectedChar) 
+     THEN CountDigits <-- CountDigits + 1
+    ElSE
+   CountSpecial <-- CountSpecial + 1
+   ENDIF
+NEXT i
+
+
+OUTPUT "The count for the selected character is: " & CountSelect
+OUTPUT "The count for the other alphabets is: " & CountOthers
+OUPUT "The count of digits is: " & CountDigits
+OUTPUT "The count of special characters is: " & CountSpecial

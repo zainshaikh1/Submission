@@ -1,0 +1,29 @@
+//DECLARATION
+DECLARE Str1,Str2,a,b,TwoChar1,TwoChar2,FinalStr : STRING
+
+DECLARE X , Y : INTEGER
+
+//INITALIZATION
+str1 <--  " "
+str2 <--  " "
+a <--  " "
+b <--  " "
+TwoChar1 <--  " "
+TwoChar2 <--  " "
+FinalStr<--  " "
+X <-- 0
+Y <-- 0
+
+//PROGRAMME
+OUTPUT "Enter First String"
+INPUT Str1
+OUTPUT "Enter Second String"
+INPUT Str2
+X <-- LEN(Str1)-2
+Y <-- LEN(Str2)-2
+TwoChar1  <-- LEFT(Str1,2)
+TwoChar2  <-- LEFT(Str2,2)
+a <-- TwoChar1 & MID(Str2,3,Y)
+b <-- TwoChar2 & MID(Str1,3,X)
+FinalStr <-- a & " " & b
+OUTPUT "The Final String is" FinalStr

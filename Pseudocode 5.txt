@@ -1,0 +1,56 @@
+//Pseudocode
+//DECLARATIONS
+DECLARE Str1 : STRING
+DECLARE Char1 : CHARACTER
+DECLARE i, ACounter: INTEGER
+DECLARE i, ECounter: INTEGER
+DECLARE i, ICounter: INTEGER
+DECLARE i, OCounter: INTEGER
+DECLARE i, UCounter: INTEGER
+
+//INITIALISE
+Str1 ← ""
+Char1 ← ''
+i ← 0
+ACounter ← 0
+ECounter ← 0
+ICounter ← 0
+OCounter ← 0
+UCounter ← 0
+
+//INPUT
+INPUT "Enter string to process: ", Str1
+
+//PROCESS
+For i ← 1 TO LEN(Str1)
+  Char1 ← MID(Str1, i, 1)
+  Char1 ← UCase(Char1)
+  IF Char1 = 'A'
+THEN
+      ACounter ← ACounter +1
+  END IF
+  IF Char1 = 'E'
+THEN
+      ECounter ← ECounter +1
+  END IF
+  IF Char1 = 'I' 
+THEN
+      ICounter ← ICounter +1
+  END IF
+  IF Char1 = 'O' 
+THEN
+      OCounter ← OCounter +1
+  END IF
+  IF Char1 = 'U'
+    THEN
+      UCounter ← UCounter +1
+  END IF
+Next i
+
+
+//OUTPUT
+Output "A occurs " & ACounter & " time(s)."
+Output "E occurs " & ECounter & " time(s)."
+Output "I occurs " & ICounter & " time(s)."
+Output "O occurs " & OCounter & " time(s)."
+Output "U occurs " & UCounter & " time(s)."

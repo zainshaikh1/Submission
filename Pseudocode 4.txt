@@ -1,0 +1,38 @@
+//DECLARATION
+DECLARE Str1, Str2 : String
+DECLARE Char1, Char2, Char3 : Char
+DECLARE i, j, Counter, Mostrepeated As Integer
+
+//INITIALIZATION
+Str1 = ""
+Str2 = ""
+Char1 = ''
+Char2 = ''
+Char3 = ''
+i = 0
+j = 0
+Counter = 0
+Mostrepeated = 0
+
+//PROGRAMME
+INPUT "Input your string:" Str1
+
+For i <-- 1 to LEN(Str1)
+   Char3 <-- Mid(Str1, i, 1)
+   Counter <-- 0
+   For j <-- 1 to LEN(Str1)
+       Char2 <-- Mid(Str1, j, 1)
+       IF Char2 <-- Char3 THEN
+       Counter = Counter + 1
+       END IF
+   Next j
+
+   If Mostrepeated < Counter Then
+      Mostrepeated <-- Counter
+      Char1 = Char3
+   End If
+
+Next i
+
+Output "Most repeated character is: " & Char1
+  

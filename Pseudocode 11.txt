@@ -1,0 +1,27 @@
+//DECLARATION 
+
+DECLARE Str1,FinalStr: STRING
+DECLARE A,B,C: INTEGER
+
+
+//INITIALIZATION
+
+Str1 <-- " "
+FinalStr <--  " "
+A <-- 0
+B <-- 0
+C <-- 0
+
+//PROGRAMME
+
+OUTPUT "Enter any sentence/string"
+INPUT Str1
+A <-- LOCATE(Str1,"not")
+B <-- LOCATE(Str1,"bad")
+C <-- LEN(Str1)- B -2
+IF C > 0
+      FinalStr <-- LEFT(Str1,A-1) & "good" & RIGHT(Str1, C)
+ElSE
+     FinalStr <-- LEFT(Str1,A-1) & "good"
+END IF
+OUTPUT "The updated string is" & FinalStr

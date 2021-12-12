@@ -1,0 +1,24 @@
+//DECLARATION
+DECLARE s : STRING
+DECLARE ThisChar , FirstChar : CHARACTER
+DECLARE X , i : INTEGER
+
+//INITALIZATION
+s <--  " "
+ThisChar <-- ' '
+FirstChar <-- ' '
+X <-- 0
+i <-- 0
+
+//PROGRAMME
+OUTPUT "Enter any string: "
+INPUT s
+FirstChar <-- LEFT(s,1)
+For i <-- 2 to LEN(s)
+      X <-- LEN(s) - i
+      ThisChar <-- MID(s,i,1)
+      IF ThisChar=FirstChar
+            THEN s <-- LEFT(s,i-1) & "*" & MID(s,i+1,X)
+       ENDIF
+NEXT i
+OUTPUT "The updated string is" & s

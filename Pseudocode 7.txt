@@ -1,0 +1,22 @@
+//DECLARATION
+DECLARE Str1, FN, LN : STRING
+
+
+//INITIALISATION
+Str1 ← ""
+FN ← ""
+LN ← ""
+
+
+//INPUT
+Input "Enter String:" Str1
+
+
+//PROCESS
+If Len(Str1) <= 2
+  Then Output "New string is: " Str1
+Else If Len(Str1) > 2
+  FN ← LEFT(Str1, 2)
+  LN ← RIGHT(Str1, 2)
+  OUTPUT "New string is: " & FN & LN
+  End If

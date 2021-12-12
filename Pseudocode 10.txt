@@ -1,0 +1,22 @@
+//DECLARATION 
+
+DECLARE Str1, Last3 : STRING
+
+//INITIALIZATION
+
+Str1 <-- " "
+Last3 <-- " "
+
+// PROGRAMME
+INPUT Str1
+IF LEN(Str1) < 3
+    THEN Str1 <-- Str1
+ELSE
+     Last3 <-- RIGHT(Str1,3)
+     IF Last3 = ing
+           THEN Str1 <-- Str1 & "ly"
+     ELSE
+           Str1 <-- Str1 & "ing"
+     ENDIF
+ENDIF
+OUPUT "The updated string is" Str1
